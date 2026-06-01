@@ -102,7 +102,7 @@ main a:hover, footer a:hover {
     text-decoration: underline;
 }
 
-/* Vídeo */
+
 iframe {
     display: block;
     margin: 20px auto;
@@ -110,7 +110,6 @@ iframe {
     border-radius: 8px;
 }
 
-/* Rodapé */
 footer {
     background-color: #5c1f1f;
     color: white;
