@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 05</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1e3a5f;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #1e90ff;
+            box-shadow: 0 0 5px #1e90ff;
+        }
+        .opcoes {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .opcoes label {
+            font-weight: normal;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        button {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1e90ff;
+            transition: 0.3s;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+                padding: 18px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Aluno</h1>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso">
+                <option value="">Selecione seu curso</option>
+                <option value="engenharia-software">Engenharia de Software</option>
+                <option value="direito">Direito</option>
+                <option value="administracao">Administração</option>
+                <option value="psicologia">Psicologia</option>
+            </select>
+            <label>Sexo:</label>
+            <div class="opcoes">
+                <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+                <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+                </label>
+            </div>
+            <label>Interesses:</label>
+            <div class="opcoes">
+                <label><input type="checkbox" name="interesses" value="programacao"> Programação</label>
+                <label><input type="checkbox" name="interesses" value="design"> Design</label>
+                <label><input type="checkbox" name="interesses" value="banco-dados"> Banco de Dados</label>
+                <label><input type="checkbox" name="interesses" value="gestao"> Gestão de Projetos</label>
+            </div>
+            <label for="comentarios">Comentários:</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Digite seus comentários"></textarea>
+            <label for="foto">Upload de foto:</label>
+            <input type="file" id="foto" name="foto">
+            <button type="submit">Enviar Cadastro</button>
+        </form>
+    </div>
+</body>
+</html>
